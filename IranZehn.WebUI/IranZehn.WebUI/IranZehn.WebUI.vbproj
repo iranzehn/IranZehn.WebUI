@@ -120,9 +120,6 @@
     <Content Include="Pages\Article\Articles.aspx" />
     <Content Include="Pages\MBTI\cc.css" />
     <Content Include="Pages\MBTI\CompleteTable.aspx" />
-    <Content Include="Pages\MBTI\HTMLPage.htm" />
-    <Content Include="Pages\MBTI\HTMLPage2.htm" />
-    <Content Include="Pages\MBTI\HTMLPage3.htm" />
     <Content Include="Pages\MBTI\Images\Ads\Poster01.jpg" />
     <Content Include="Pages\MBTI\Images\Ads\Poster02.jpg" />
     <Content Include="Pages\MBTI\Images\Corner.png" />
