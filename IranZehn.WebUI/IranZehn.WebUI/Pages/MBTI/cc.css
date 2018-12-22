@@ -1,0 +1,72 @@
+﻿body 
+{
+	
+}
+input
+{
+	border: 0px solid #FFFFFF;
+	width:40px;
+	text-align:center;
+}
+input.RowHeader
+{
+	background:#0066FF;	
+}
+input.ColHeader
+{
+	background:#FFFF99;
+	height: 18px;
+}
+
+td
+{
+	border: 1px solid black;
+	width:40px;
+}
+td.RowHeader
+{
+	background:#0066FF;	
+	
+}
+td.ColHeader
+{
+	background:#FFFF99;	
+}
+td.Corner
+{
+	border: 1px solid black;
+	padding:0px;
+	margin:0px;
+	direction: ltr;
+}
+td.MainTable
+{
+	border: 0px solid black;
+	width:100%;
+	font-family:Tahoma;
+	font-size:x-small;
+	cursor:ha
+}
+
+
+div
+{
+	direction:rtl;
+	text-align:center;
+	vertical-align:middle;
+	font-family:Tahoma;
+	font-size:small;
+}
+table
+{
+	direction:rtl;
+}
+table.Chart
+{
+	direction:rtl;
+	text-align:center;
+	vertical-align:middle;
+	font-family:Tahoma;
+	font-size:small;
+
+}

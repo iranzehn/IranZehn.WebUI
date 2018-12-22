@@ -1,0 +1,149 @@
+﻿<%@ Master Language="VB" CodeBehind="~/MasterPage.master.vb" Inherits="IranZehn.MasterPage" %>
+
+<%@ Register Src="UserControls/uLogin.ascx" TagName="uLogin" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>.: Iran Zehn :.</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta name="Description" content="آشنایی با تیپ های شخصیتی ، توسعه فرهنگ و علم روانشناسی" />
+
+</head>
+
+<body>
+    <form runat="server">
+        <table>
+            <tr>
+                <td style="width: 150px; vertical-align: top;">
+                    <%--<iframe src="http://yllix.com/banner_show.php?section=General&amp;pub=697784&amp;format=160x600&amp;ga=g" frameborder="0" scrolling="no" width="160" height="600" marginwidth="0" marginheight="0"></iframe>--%>
+                    <td>
+
+                        <div id="navigation" dir='rtl' style="text-align: center">
+                            <asp:Menu ID="mnuHeader" runat="server" Orientation="Horizontal" EnableTheming="True"
+                                BackColor="White" ForeColor="Black" Style="text-align: center" StaticEnableDefaultPopOutImage="False">
+                                <StaticMenuStyle BackColor="White" />
+                                <StaticMenuItemStyle Width="50px" BackColor="White" />
+                                <DynamicHoverStyle BackColor="#63B106" ForeColor="Black" />
+                                <DynamicMenuItemStyle BackColor="White" BorderWidth="1px" ForeColor="#63B106" Width="124px" />
+                                <StaticHoverStyle BackColor="#63B106" ForeColor="Black" />
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="خانه" Value="خانه"></asp:MenuItem>
+                                    <asp:MenuItem Text="آزمون ها" Value="آزمون ها" Selectable="False">
+                                        <asp:MenuItem Text="میرگز-بیرگز" Value="میرگز-بیرگز" NavigateUrl="~/Pages/Tests/MBTI/Test.aspx"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="تیپ ها" Value="تیپ ها" Selectable="False">
+                                        <asp:MenuItem Text="ESTP" Value="ESTP" NavigateUrl="MBTITypes.aspx?type=ESTP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ESFP" Value="ESFP" NavigateUrl="MBTITypes.aspx?type=ESFP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ISTP" Value="ISTP" NavigateUrl="MBTITypes.aspx?type=ISTP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ISFP" Value="ISFP" NavigateUrl="MBTITypes.aspx?type=ISFP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ESTJ" Value="ESTJ" NavigateUrl="MBTITypes.aspx?type=ESTJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ESFJ" Value="ESFJ" NavigateUrl="MBTITypes.aspx?type=ESFJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ISTJ" Value="ISTJ" NavigateUrl="MBTITypes.aspx?type=ISTJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ISFJ" Value="ISFJ" NavigateUrl="MBTITypes.aspx?type=ISFJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ENTJ" Value="ENTJ" NavigateUrl="MBTITypes.aspx?type=ENTJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ENTP" Value="ENTP" NavigateUrl="MBTITypes.aspx?type=ENTP"></asp:MenuItem>
+                                        <asp:MenuItem Text="INTJ" Value="INTJ" NavigateUrl="MBTITypes.aspx?type=INTJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="INTP" Value="INTP" NavigateUrl="MBTITypes.aspx?type=INTP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ENFP" Value="ENFP" NavigateUrl="MBTITypes.aspx?type=ENFP"></asp:MenuItem>
+                                        <asp:MenuItem Text="ENFJ" Value="ENFJ" NavigateUrl="MBTITypes.aspx?type=ENFJ"></asp:MenuItem>
+                                        <asp:MenuItem Text="INFP" Value="INFP" NavigateUrl="MBTITypes.aspx?type=INFP"></asp:MenuItem>
+                                        <asp:MenuItem Text="INFJ" Value="INFJ" NavigateUrl="MBTITypes.aspx?type=INFJ"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="جدول روابط" Value="جدول روابط" NavigateUrl="~/Pages/MBTI/CompleteTable.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="گزارشات" Value="گزارشات" NavigateUrl="~/Pages/Reports/Reports.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="درباره ..." Value="درباره ..." Selectable="False">
+                                        <asp:MenuItem Text="درباره MBTI" Value="درباره MBTI" NavigateUrl="~/AboutMBTI.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="درباره Socionics" Value="درباره Socionics" NavigateUrl="~/AboutSocionics.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="درباره ما" Value="درباره ما" NavigateUrl="~/AboutUs.aspx"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="تماس با ما" Value="تماس با ما" NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                        <div id="myhead" dir='rtl' style="text-align: center; direction: ltr;">
+                            <asp:Image runat="server" ImageUrl="~/Images/Iranzehn.png" Width="200" Height="84" />
+                           <%-- <a style="border: 0px" title="دانلود نوار ابزار برای فایرفاکس" href="http://search.bpath.com/toolbar/install/install.dbm?codeID=229326_990500">
+                                <asp:Image runat='server' Height="84px" ImageUrl="~/Images/Toolbar.png" />
+                            </a>--%>
+                        </div>
+                        <div id="bodyarea" dir='rtl'>
+                            <div id="maintextarea123" style="text-align: center">
+                                <div style="padding: 0Px 10Px 0Px 0Px;">
+                                    <asp:Panel ID="Panel1" runat="server" Width='730px' Height='463px' ScrollBars="Auto">
+                                        <div style="padding: 5Px 15Px 5Px 5Px;">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </asp:Panel>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="footer" dir='rtl' style="text-align: center">
+                            <p style='text-align: center; direction: ltr;'>
+                                <br />
+                                <span>Copyright 2009 -
+                            <asp:Label ID="lblCurrentYear" runat="server" Text="Label"></asp:Label>
+                                    www.iranzehn.com - All rights reserved. </span>
+                                <br />
+                                <asp:Label ID="lblVersion" runat="server" Text="Label"></asp:Label>
+                                <br />
+                            </p>
+                        </div>
+
+
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES * * */
+                            var disqus_shortname = 'iranzehn';
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function () {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES * * */
+                            var disqus_shortname = 'iranzehn';
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function () {
+                                var s = document.createElement('script'); s.async = true;
+                                s.type = 'text/javascript';
+                                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                            }());
+                        </script>
+
+                    </td>
+                    <td style="width: 150px; vertical-align: top;">
+                        <br />
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-4508860-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</html>

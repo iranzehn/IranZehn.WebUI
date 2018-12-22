@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{19222CE4-8CF9-4769-BBE9-6A5ED92A8715}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IranZehn</RootNamespace>
+    <AssemblyName>IranZehn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IranZehn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IranZehn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Included Dlls\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutMBTI.aspx" />
+    <Content Include="AboutSocionics.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="GenericErrorPage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\AboutUs\Correct.png" />
+    <Content Include="Images\ad.jpg" />
+    <Content Include="Images\Ads\Poster01.jpg" />
+    <Content Include="Images\Ads\Poster02.jpg" />
+    <Content Include="Images\background-image.gif" />
+    <Content Include="Images\Facebook.png" />
+    <Content Include="Images\Facebook_Step1.png" />
+    <Content Include="Images\Facebook_Step2.png" />
+    <Content Include="Images\index_r1_c1.gif" />
+    <Content Include="Images\index_r2_c1.gif" />
+    <Content Include="Images\index_r3_c1.gif" />
+    <Content Include="Images\index_r4_c1.gif" />
+    <Content Include="Images\Iranzehn.png" />
+    <Content Include="Images\Printer.png" />
+    <Content Include="Images\Socionics\aushra.gif" />
+    <Content Include="Images\Socionics\jung.gif" />
+    <Content Include="Images\Toolbar.png" />
+    <Content Include="Images\Type\Negative.png" />
+    <Content Include="Images\Type\Positive.png" />
+    <Content Include="Images\Type\Star.png" />
+    <None Include="Included Dlls\CSSFriendly.dll" />
+    <None Include="Included Dlls\Recaptcha.dll" />
+    <Content Include="info.txt" />
+    <Content Include="JScript.js" />
+    <Content Include="MBTITypes.aspx" />
+    <Content Include="NewLogin.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="Pages\Article\Articles.aspx" />
+    <Content Include="Pages\MBTI\cc.css" />
+    <Content Include="Pages\MBTI\CompleteTable.aspx" />
+    <Content Include="Pages\MBTI\HTMLPage.htm" />
+    <Content Include="Pages\MBTI\HTMLPage2.htm" />
+    <Content Include="Pages\MBTI\HTMLPage3.htm" />
+    <Content Include="Pages\MBTI\Images\Ads\Poster01.jpg" />
+    <Content Include="Pages\MBTI\Images\Ads\Poster02.jpg" />
+    <Content Include="Pages\MBTI\Images\Corner.png" />
+    <Content Include="Pages\MBTI\Images\Iranzehn.png" />
+    <Content Include="Pages\MBTI\Images\i_md_wht.gif" />
+    <Content Include="Pages\MBTI\Images\j_md_wht.gif" />
+    <Content Include="Pages\MBTI\Images\n_md_wht.gif" />
+    <Content Include="Pages\MBTI\Images\Star.png" />
+    <Content Include="Pages\MBTI\Images\t_md_wht.gif" />
+    <Content Include="Pages\Reports\Images\Ads\Poster01.jpg" />
+    <Content Include="Pages\Reports\Images\Ads\Poster02.jpg" />
+    <Content Include="Pages\Reports\Images\Iranzehn.png" />
+    <Content Include="Pages\Reports\Reports.aspx" />
+    <Content Include="Pages\Store\Images\Corner.png" />
+    <Content Include="Pages\Store\Images\Iranzehn.png" />
+    <Content Include="Pages\Store\Images\i_md_wht.gif" />
+    <Content Include="Pages\Store\Images\j_md_wht.gif" />
+    <Content Include="Pages\Store\Images\n_md_wht.gif" />
+    <Content Include="Pages\Store\Images\Star.png" />
+    <Content Include="Pages\Store\Images\t_md_wht.gif" />
+    <Content Include="Pages\Store\Store.aspx" />
+    <Content Include="Pages\Tests\MBTI\Test.aspx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\SelectFT.ascx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\SelectIE.ascx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\SelectPJ.ascx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\SelectSN.ascx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\Step01.ascx" />
+    <Content Include="Pages\Tests\MBTI\UserControls\Step02.ascx" />
+    <Content Include="PrintPreview.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="styles.css" />
+    <Content Include="UserControls\uLogin.ascx" />
+    <Content Include="UserControls\uNotices.ascx" />
+    <Content Include="UserControls\uRegister.ascx" />
+    <Content Include="UserControls\uVisit.ascx" />
+    <Content Include="VHoY4fSchy3bzN3kFAWtn7cNR0Q.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMBTI.aspx.designer.vb">
+      <DependentUpon>AboutMBTI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutMBTI.aspx.vb">
+      <DependentUpon>AboutMBTI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutSocionics.aspx.designer.vb">
+      <DependentUpon>AboutSocionics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutSocionics.aspx.vb">
+      <DependentUpon>AboutSocionics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.vb">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.vb">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Classes\ApplicationCache.vb" />
+    <Compile Include="App_Code\Classes\BasePage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Classes\CommonFunctions.vb" />
+    <Compile Include="App_Code\Classes\DataManager\DBManager.vb" />
+    <Compile Include="App_Code\Classes\DataManager\NoticeData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\QueryData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\QuestionData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\RelationData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\ReportData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\TemperamentData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\TestResultDetailData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\TestResultData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\TypeData.vb" />
+    <Compile Include="App_Code\Classes\DataManager\VisitData.vb" />
+    <Compile Include="App_Code\Classes\MyStrings.vb" />
+    <Compile Include="App_Code\Classes\Relation.vb" />
+    <Compile Include="App_Code\Classes\ReportCreator.vb" />
+    <Compile Include="App_Code\Classes\Statistics\StatisticsManager.vb" />
+    <Compile Include="App_Code\Classes\TestGenerator\BaseTestGenerator.vb" />
+    <Compile Include="App_Code\Classes\TestGenerator\YangTestGenerator.vb" />
+    <Compile Include="App_Code\Classes\TypeObject.vb" />
+    <Compile Include="App_Code\Reports\MBTI\ReportGenerator.vb" />
+    <Compile Include="App_Code\TableStructure\TestResult.vb" />
+    <Compile Include="ContactUs.aspx.designer.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataPersistence.vb" />
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenericErrorPage.aspx.designer.vb">
+      <DependentUpon>GenericErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericErrorPage.aspx.vb">
+      <DependentUpon>GenericErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MBTITypes.aspx.designer.vb">
+      <DependentUpon>MBTITypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MBTITypes.aspx.vb">
+      <DependentUpon>MBTITypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewLogin.aspx.designer.vb">
+      <DependentUpon>NewLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewLogin.aspx.vb">
+      <DependentUpon>NewLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Article\Articles.aspx.vb">
+      <DependentUpon>Articles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MBTI\CompleteTable.aspx.designer.vb">
+      <DependentUpon>CompleteTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MBTI\CompleteTable.aspx.vb">
+      <DependentUpon>CompleteTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\Reports.aspx.designer.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\Reports.aspx.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\Store.aspx.vb">
+      <DependentUpon>Store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\Test.aspx.designer.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\Test.aspx.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectFT.ascx.designer.vb">
+      <DependentUpon>SelectFT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectFT.ascx.vb">
+      <DependentUpon>SelectFT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectIE.ascx.designer.vb">
+      <DependentUpon>SelectIE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectIE.ascx.vb">
+      <DependentUpon>SelectIE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectPJ.ascx.designer.vb">
+      <DependentUpon>SelectPJ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectPJ.ascx.vb">
+      <DependentUpon>SelectPJ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectSN.ascx.designer.vb">
+      <DependentUpon>SelectSN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\SelectSN.ascx.vb">
+      <DependentUpon>SelectSN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\Step01.ascx.designer.vb">
+      <DependentUpon>Step01.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\Step01.ascx.vb">
+      <DependentUpon>Step01.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\Step02.ascx.designer.vb">
+      <DependentUpon>Step02.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\MBTI\UserControls\Step02.ascx.vb">
+      <DependentUpon>Step02.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPreview.aspx.designer.vb">
+      <DependentUpon>PrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreview.aspx.vb">
+      <DependentUpon>PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uLogin.ascx.designer.vb">
+      <DependentUpon>uLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uLogin.ascx.vb">
+      <DependentUpon>uLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uNotices.ascx.designer.vb">
+      <DependentUpon>uNotices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uNotices.ascx.vb">
+      <DependentUpon>uNotices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uRegister.ascx.designer.vb">
+      <DependentUpon>uRegister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uRegister.ascx.vb">
+      <DependentUpon>uRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uVisit.ascx.vb">
+      <DependentUpon>uVisit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uVisit.ascx.designer.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\IranZehn.pubxml" />
+    <None Include="My Project\PublishProfiles\IranZehnLocal.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Pages\Reports\1389-10-18\expGender.pdf" />
+    <Content Include="Pages\Reports\1389-10-18\expGender.xls" />
+    <Content Include="Pages\Reports\1389-10-18\expGraduation.pdf" />
+    <Content Include="Pages\Reports\1389-10-18\expGraduation.xls" />
+    <Content Include="Pages\Reports\1389-10-18\expMarriageStatus.pdf" />
+    <Content Include="Pages\Reports\1389-10-18\expMarriageStatus.xls" />
+    <Content Include="Pages\Reports\1389-10-18\expTotal.pdf" />
+    <Content Include="Pages\Reports\1389-10-18\expTotal.xls" />
+    <Content Include="Site1.Master" />
+    <Content Include="Pages\Reports\rpGender.pdf" />
+    <Content Include="Pages\Reports\rpGender.xlsx" />
+    <Content Include="Pages\Reports\rpGraduation.pdf" />
+    <Content Include="Pages\Reports\rpGraduation.xlsx" />
+    <Content Include="Pages\Reports\rpMarriageStatus.pdf" />
+    <Content Include="Pages\Reports\rpMarriageStatus.xlsx" />
+    <Content Include="Pages\Reports\rpTotal.pdf" />
+    <Content Include="Pages\Reports\rpTotal.xlsx" />
+    <Content Include="Pages\Reports\1393-08-04\rpGender.pdf" />
+    <Content Include="Pages\Reports\1393-08-04\rpGender.xlsx" />
+    <Content Include="Pages\Reports\1393-08-04\rpGraduation.pdf" />
+    <Content Include="Pages\Reports\1393-08-04\rpGraduation.xlsx" />
+    <Content Include="Pages\Reports\1393-08-04\rpMarriageStatus.pdf" />
+    <Content Include="Pages\Reports\1393-08-04\rpMarriageStatus.xlsx" />
+    <Content Include="Pages\Reports\1393-08-04\rpTotal.pdf" />
+    <Content Include="Pages\Reports\1393-08-04\rpTotal.xlsx" />
+    <Content Include="Pages\Reports\1394-05-14\rpGender.pdf" />
+    <Content Include="Pages\Reports\1394-05-14\rpGender.xlsx" />
+    <Content Include="Pages\Reports\1394-05-14\rpGraduation.pdf" />
+    <Content Include="Pages\Reports\1394-05-14\rpGraduation.xlsx" />
+    <Content Include="Pages\Reports\1394-05-14\rpMarriageStatus.pdf" />
+    <Content Include="Pages\Reports\1394-05-14\rpMarriageStatus.xlsx" />
+    <Content Include="Pages\Reports\1394-05-14\rpTotal.pdf" />
+    <Content Include="Pages\Reports\1394-05-14\rpTotal.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogManagement.BLL\LogManagement.BLL.csproj">
+      <Project>{adb76b1c-05ee-4268-848f-630d30cf42b3}</Project>
+      <Name>LogManagement.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5117</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/IranZehn</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

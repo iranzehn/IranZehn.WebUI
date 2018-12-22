@@ -1,0 +1,157 @@
+
+body {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 20px;
+    font-weight: normal;
+    color: #3f9303;
+    background-image: url('Images/background-image.gif');
+    background-repeat: repeat-x;
+    background-color: #add63c;
+    margin: 0px;
+}
+
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+p {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 20px;
+    font-weight: normal;
+    color: #3f9303;
+    text-align: justify;
+}
+
+#navigation {
+    background-image: url('images/index_r1_c1.gif');
+    width: 731px;
+    height: 32px;
+    padding-right: 20px;
+    padding-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    direction: rtl;
+}
+
+    #navigation ul, li {
+        display: inline;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+#myhead {
+    background-image: url('images/index_r2_c1.gif');
+    width: 741px;
+    height: 98px;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#head p {
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+#bodyarea {
+    background-image: url('images/index_r3_c1.gif');
+    width: 751px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    height: auto;
+}
+
+#footer {
+    background-image: url('images/index_r4_c1.gif');
+    background-repeat: no-repeat;
+    width: 751px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    font-size: 9px;
+    text-align: center;
+}
+
+#speechbubble {
+    background-image: url('images/speech-bubble.gif');
+    width: 183px;
+    height: 183px;
+}
+
+#speechbubblescrollbar {
+    color: #FFFFFF;
+    width: 163px;
+    height: 144px;
+    overflow: auto;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+    #speechbubblescrollbar p {
+        color: #FFFFFF;
+    }
+
+.navigationtext {
+    text-align: right;
+    padding: 4px 5px 0px 5px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.smallh1 {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#maintextarea {
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 473px;
+    float: left;
+}
+
+#rightcolumntextarea {
+    padding-left: 10px;
+    padding-right: 20px;
+    width: 180px;
+    float: left;
+}
+
+.limeimage {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.smallertext {
+    font-size: 9px;
+    text-align: center;
+}
+
+td.Type1 {
+    text-align: right;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #000000;
+}

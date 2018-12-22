@@ -1,0 +1,7 @@
+# Contact info submission
+url: iranzehn.com
+site_owner: iranzehn.com
+country: Australia
+display_email: admin@iranzehn.com
+site_name: IranZehn.com
+site_description: MBTI psychology test and description.
